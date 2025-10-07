@@ -11,6 +11,13 @@
   background-clip: padding-box;
   position: relative;
   overflow: hidden;
+  transform-style: preserve-3d;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.custom-dialog-main .MuiDialog-paper:hover {
+  box-shadow: 0 20px 56px rgba(13, 70, 137, 0.25);
+  transform: scale(1.01);
 }
 
 .custom-dialog-main .MuiDialog-paper::before {

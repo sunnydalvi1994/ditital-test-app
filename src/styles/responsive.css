@@ -180,6 +180,16 @@
   .prev-btn:active,
   .verify-btn:active {
     transform: scale(0.97);
+    animation: tapFeedback 0.3s ease-out;
+  }
+
+  @keyframes tapFeedback {
+    0% {
+      box-shadow: 0 0 0 0 rgba(13, 70, 137, 0.4);
+    }
+    100% {
+      box-shadow: 0 0 0 10px rgba(13, 70, 137, 0);
+    }
   }
 }
 

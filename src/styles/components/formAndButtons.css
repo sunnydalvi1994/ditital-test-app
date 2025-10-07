@@ -356,11 +356,14 @@ input:-webkit-autofill {
   border: 2px solid rgba(13, 70, 137, 0.1);
   transition: all 0.3s ease;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  transform-style: preserve-3d;
+  perspective: 1000px;
 }
 
 .account-section:hover {
   border-color: rgba(13, 70, 137, 0.2);
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  transform: translateY(-2px) rotateX(1deg);
 }
 
 .account-question {
@@ -473,11 +476,12 @@ input:-webkit-autofill {
   background: white;
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  transform-style: preserve-3d;
 }
 
 .address-card:hover {
   border-color: #3a76b9;
-  transform: translateY(-3px);
+  transform: translateY(-3px) scale(1.02);
   box-shadow: 0 8px 20px rgba(13, 70, 137, 0.15);
 }
 
@@ -485,6 +489,7 @@ input:-webkit-autofill {
   border-color: #0d4689;
   background: linear-gradient(135deg, rgba(13, 70, 137, 0.05), rgba(79, 187, 200, 0.05));
   box-shadow: 0 8px 20px rgba(13, 70, 137, 0.2);
+  transform: scale(1.02);
 }
 
 .address-edit-btn {

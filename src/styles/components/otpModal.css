@@ -38,6 +38,8 @@
   position: relative;
   overflow: hidden;
   animation: scaleIn 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  transform-style: preserve-3d;
+  perspective: 1000px;
 }
 
 .otp-modal-content::before {
@@ -154,6 +156,16 @@
   box-shadow: 0 0 0 4px rgba(13, 70, 137, 0.15);
   background: linear-gradient(135deg, #f8f9fa, #ffffff);
   transform: scale(1.08);
+  animation: ripple 0.6s ease-out;
+}
+
+@keyframes ripple {
+  0% {
+    box-shadow: 0 0 0 0 rgba(13, 70, 137, 0.4);
+  }
+  100% {
+    box-shadow: 0 0 0 8px rgba(13, 70, 137, 0);
+  }
 }
 
 .otp-digit:hover {

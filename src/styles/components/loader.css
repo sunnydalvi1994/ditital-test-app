@@ -15,6 +15,7 @@
 .loader-progress {
   position: relative;
   animation: spin 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+  transform-style: preserve-3d;
 }
 
 .loader-progress::before {
