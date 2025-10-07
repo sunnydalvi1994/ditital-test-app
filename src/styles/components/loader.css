@@ -1,0 +1,11 @@
+.loader-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.loader-progress {
+  color: #ff9800;
+  animation: spin 1s linear infinite;
+}

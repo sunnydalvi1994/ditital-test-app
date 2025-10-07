@@ -1,0 +1,131 @@
+.offer-container {
+  width: 100%;
+  margin-top: 1rem;
+}
+
+.offer-paper {
+  padding: 2rem;
+  border-radius: 16px;
+  border: 2px solid #3a76b9;
+  background: linear-gradient(135deg, #ffffff, #fff8f0);
+  box-shadow: 0 8px 20px rgba(0, 60, 255, 0.15);
+}
+
+.offer-heading {
+  margin-bottom: 1.5rem !important;
+  /* color: #0d4689 !important; */
+}
+
+.offer-details {
+  text-align: center;
+}
+.offer-details .offer-description{
+  color: #7f7d7d !important
+}
+.emi-text {
+  font-size: 36px !important;
+  color: green !important;
+  margin: 1rem 0 !important;
+}
+
+.tenure-section {
+  padding: 1.5rem;
+  margin: 1.5rem 0;
+  border-radius: 8px;
+  background-color: #f8f9fa;
+}
+
+.tenure-label {
+  font-weight: 600 !important;
+  color:#7f7d7d !important;
+  margin-bottom: 1rem !important;
+}
+
+.tenure-value {
+  color: green;
+  font-weight: bold;
+}
+
+.tenure-slider .MuiSlider-thumb {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, green, green);
+  box-shadow: 0 2px 6px rgba(0, 128, 0, 0.4);
+}
+
+.tenure-range {
+  display: flex;
+  justify-content: space-between;
+  font-size: 12px;
+  color: #666;
+  margin-top: 0.5rem;
+}
+
+.divider {
+  margin: 1.5rem 0 !important;
+}
+
+.loan-info {
+  text-align: left;
+  padding: 0 0.5rem;
+}
+
+.loan-info p {
+  margin-bottom: 0.5rem;
+}
+.credit-score-note{
+  margin-top: 1rem;
+  font-size: 14px;
+  color: blue;
+  text-align: center;
+}
+
+.check-credit-score{
+  background-color: #008000b0;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  margin-top: 10px;
+}
+
+.check-credit-score:hover {
+  background-color: darkgreen;
+}
+
+
+.tenure-input {
+  border: none;
+  border-bottom: 1px solid #000;
+  background: transparent;
+  font-size: 1.2rem;
+  /* width: 60px; */
+  text-align: center;
+  color: green;;
+  font-weight: bold;
+}
+
+.tenure-input:focus {
+  outline: none;
+  border-bottom: 2px solid green;
+}
+
+
+
+.tenure-input:focus {
+  outline: none;
+  border-bottom: 2px solid green;
+}
+
+
+
+.smooth-slider .MuiSlider-thumb {
+  transition: left 0.3s ease;
+}
+
+.smooth-slider .MuiSlider-track {
+  transition: width 0.3s ease;
+}

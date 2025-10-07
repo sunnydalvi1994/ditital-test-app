@@ -1,0 +1,97 @@
+.header-appbar {
+  background-color: transparent; /* Bank theme color */
+}
+.header-appbar > ::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 83%;
+  height: 100%;
+  background: #0d4689;
+  /* background-image: linear-gradient(to right, #0d4689, #cf3034) !important; */
+  z-index: -1;
+}
+.header-menu-item-button {
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 18px;
+}
+
+.header-toolbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header-logo {
+  font-weight: bold;
+  cursor: pointer;
+  width: 120px;
+  height: 40px;
+}
+
+.header-spacer {
+  flex-grow: 1;
+}
+
+.header-menus {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.header-menu-item button {
+  font-weight: 500;
+  text-transform: none;
+}
+
+.MuiMenu-paper {
+  min-width: 180px;
+}
+
+.navbar-icon{
+    color: #0d4689;
+    top: -4px;
+
+}
+
+@media (max-width: 1200px) {
+  .header-appbar > ::before {
+    width: 80%;
+  }
+}
+
+@media (max-width: 991px) {
+  .header-appbar > ::before {
+    width: 74%;
+  }
+}
+
+@media (max-width: 890px) {
+  .header-appbar > ::before {
+    width: 69%;
+  }
+}
+@media (max-width: 768px) {
+}
+
+@media (max-width: 750px) {
+  .header-appbar > ::before {
+    width: 60%;
+  }
+}
+
+@media (max-width: 556px) {
+  .header-logo {
+    text-align: center;
+  }
+  .header-appbar > ::before {
+    content: none;
+  }
+  .header-toolbar {
+    padding: 5px 10px;
+  }
+}
+
+

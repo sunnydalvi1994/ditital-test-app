@@ -1,0 +1,95 @@
+/* Dialog title */
+.dialog-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+
+/* Dialog content */
+.dialog-content {
+  font-size: 14px;
+  line-height: 1.6;
+  color: #555;
+  text-align: left;
+  padding: 20px;
+}
+
+/* Section heading */
+.dialog-heading {
+  font-size: 16px;
+  font-weight: 600;
+  margin-top: 20px;
+  margin-bottom: 15px;
+  color: #333;
+}
+
+/* Paragraph text */
+.dialog-body {
+  margin-bottom: 12px;
+  line-height: 1.5;
+  font-size: 14px;
+}
+
+/* Terms list */
+.terms-list {
+  margin-left: 15px;
+  margin-bottom: 15px;
+}
+
+.terms-list p {
+  margin-bottom: 10px;
+  text-indent: -15px;
+  padding-left: 15px;
+  font-size: 14px;
+}
+
+/* Dialog actions */
+.dialog-actions {
+  display: flex;
+  justify-content: flex-end;
+  padding: 10px 20px;
+}
+
+.dialog-actions .MuiButton-root {
+  text-transform: none;
+  font-size: 0.9rem;
+}
+
+.address-search dialog {
+  padding: 10px !important;
+  background-color: red;
+}
+
+.branch-address-title {
+  /* font-weight: 100 !important; */
+}
+.branch-add-tabs {
+  padding: 0px 25px !important;
+}
+.branch-add-list {
+  padding-left: 0px !important;
+  padding-right: 0px !important;
+}
+.branch-add-list-item span {
+  font-size: 14px;
+}
+.branch-near-title {
+  text-align: center;
+  margin: 2px;
+  font-size: 16px;
+  font-weight: 600;
+  color: #4b4848;
+}
+.branch-add-filter {
+  font-size: 14px;
+}
+.branch-add-filter li {
+  font-size: 14px;
+}
+
+.branch-add-selct-label {
+    position: absolute;
+    top: -18px;
+    font-size: 14px;
+    left: 0px;
+    font-weight: 600;
+}

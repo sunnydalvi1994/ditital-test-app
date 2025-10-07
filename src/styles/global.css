@@ -1,0 +1,89 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: #eff1f5;
+}
+.common-button {
+  background: #0d4689;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background 0.3s ease;
+}
+
+.wrapper-main {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  max-width: 900px;
+  margin: 20px auto;
+}
+.wrapper-container {
+  padding: 20px;
+  background: linear-gradient(135deg, #ffffff, #fff8f0);
+  min-height: 80vh;
+  box-shadow: 0 0 30px rgba(0, 60, 255, 0.15);
+  border-radius: 16px;
+  border: 1px solid rgba(0, 60, 255, 0.15);
+  margin-bottom: 60px;
+}
+
+.btn-group-item {
+  color: #fff;
+  background-color: #333;
+  border: 2px solid #333; /* keep consistent border */
+  padding: 6px 16px; /* match MUI button padding */
+  transition: all 0.2s ease-in-out;
+  border-radius: 4px;
+}
+
+.btn-group-item:hover {
+  background-color: #444;
+  border-color: #444; /* also match hover border */
+}
+
+.btn-group-item.active {
+  border: 2px solid; /* fallback */
+  /* border-image: linear-gradient(135deg, #FF8C00, #0d4689) 1; */
+  background: #0d4689;
+  border-color: #0d4689;
+  color: #fff;
+}
+
+.btn-group-item.active:hover {
+  background: #3a76b9;
+  border-color: #0d4689; /* maintain border on hover */
+}
+
+.MuiOutlinedInput-root.Mui-focused .MuiOutlinedInput-notchedOutline {
+  border-color: #0d4689 !important; /* your orange */
+}
+
+/* Target label when focused */
+.MuiInputLabel-root.Mui-focused {
+  color: #0d4689 !important;
+}
+
+/* Optional: change cursor caret color */
+.MuiInputBase-input {
+  caret-color: #0d4689;
+}
+
+@media (max-width: 480px) {
+  .btn-group-item {
+    padding: 0px 16px;
+    text-transform: capitalize;
+  }
+}
