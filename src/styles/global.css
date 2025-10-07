@@ -1,67 +1,27 @@
-
-/* ========================================
-   GLOBAL STYLES - PROFESSIONAL BANKING UI
-   ======================================== */
-
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
-
 body {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   height: 100%;
   width: 100%;
-  font-family: 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-  background: #f5f7fa;
-  color: #333;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: #eff1f5;
 }
-
-/* ========================================
-   COMMON BUTTON STYLES
-   ======================================== */
-
 .common-button {
-  background: linear-gradient(135deg, #0d4689 0%, #3a76b9 100%);
+  background: #0d4689;
   color: #fff;
-  padding: 12px 28px;
+  padding: 10px 20px;
   border: none;
-  border-radius: 8px;
+  border-radius: 4px;
   cursor: pointer;
   font-size: 16px;
-  font-weight: 600;
-  letter-spacing: 0.5px;
-  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-  box-shadow: 0 4px 12px rgba(13, 70, 137, 0.2);
+  transition: background 0.3s ease;
 }
-
-.common-button:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(13, 70, 137, 0.3);
-  background: linear-gradient(135deg, #3a76b9 0%, #0d4689 100%);
-}
-
-.common-button:active {
-  transform: translateY(0);
-  box-shadow: 0 2px 8px rgba(13, 70, 137, 0.2);
-}
-
-.common-button:disabled {
-  background: #e0e0e0;
-  color: #999;
-  cursor: not-allowed;
-  transform: none;
-  box-shadow: none;
-}
-
-/* ========================================
-   WRAPPER CONTAINERS
-   ======================================== */
 
 .wrapper-main {
   display: flex;
@@ -69,179 +29,61 @@ body {
   justify-content: flex-start;
   max-width: 900px;
   margin: 20px auto;
-  padding: 0 16px;
-  animation: fadeIn 0.5s ease-in;
 }
-
 .wrapper-container {
-  padding: 32px;
-  background: linear-gradient(135deg, #ffffff 0%, #fff8f0 100%);
+  padding: 20px;
+  background: linear-gradient(135deg, #ffffff, #fff8f0);
   min-height: 80vh;
-  box-shadow: 0 8px 32px rgba(13, 70, 137, 0.12);
+  box-shadow: 0 0 30px rgba(0, 60, 255, 0.15);
   border-radius: 16px;
-  border: 1px solid rgba(13, 70, 137, 0.08);
-  margin-bottom: 80px;
-  transition: all 0.3s ease;
-  position: relative;
-  overflow: hidden;
+  border: 1px solid rgba(0, 60, 255, 0.15);
+  margin-bottom: 60px;
 }
-
-.wrapper-container::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 4px;
-  background: linear-gradient(90deg, #0d4689 0%, #4fbbc8 100%);
-}
-
-/* ========================================
-   BUTTON GROUP ITEMS
-   ======================================== */
 
 .btn-group-item {
-  color: #333;
-  background-color: #ffffff;
-  border: 2px solid #e0e6ed;
-  padding: 10px 20px;
-  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-  border-radius: 8px;
-  font-weight: 500;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  color: #fff;
+  background-color: #333;
+  border: 2px solid #333; /* keep consistent border */
+  padding: 6px 16px; /* match MUI button padding */
+  transition: all 0.2s ease-in-out;
+  border-radius: 4px;
 }
 
 .btn-group-item:hover {
-  background-color: #f5f7fa;
-  border-color: #3a76b9;
-  transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(13, 70, 137, 0.15);
+  background-color: #444;
+  border-color: #444; /* also match hover border */
 }
 
 .btn-group-item.active {
-  border: 2px solid #0d4689;
-  background: linear-gradient(135deg, #0d4689 0%, #3a76b9 100%);
+  border: 2px solid; /* fallback */
+  /* border-image: linear-gradient(135deg, #FF8C00, #0d4689) 1; */
+  background: #0d4689;
+  border-color: #0d4689;
   color: #fff;
-  box-shadow: 0 6px 16px rgba(13, 70, 137, 0.25);
-  transform: translateY(-2px);
 }
 
 .btn-group-item.active:hover {
-  background: linear-gradient(135deg, #3a76b9 0%, #0d4689 100%);
-  border-color: #0d4689;
-  box-shadow: 0 8px 20px rgba(13, 70, 137, 0.3);
+  background: #3a76b9;
+  border-color: #0d4689; /* maintain border on hover */
 }
-
-/* ========================================
-   MUI INPUT FOCUS STATES
-   ======================================== */
 
 .MuiOutlinedInput-root.Mui-focused .MuiOutlinedInput-notchedOutline {
-  border-color: #0d4689 !important;
-  border-width: 2px;
-  box-shadow: 0 0 0 3px rgba(13, 70, 137, 0.1);
+  border-color: #0d4689 !important; /* your orange */
 }
 
+/* Target label when focused */
 .MuiInputLabel-root.Mui-focused {
   color: #0d4689 !important;
-  font-weight: 600;
 }
 
+/* Optional: change cursor caret color */
 .MuiInputBase-input {
   caret-color: #0d4689;
-  transition: all 0.3s ease;
-}
-
-.MuiInputBase-input:focus {
-  background-color: rgba(13, 70, 137, 0.02);
-}
-
-/* ========================================
-   ANIMATIONS
-   ======================================== */
-
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-@keyframes slideInRight {
-  from {
-    opacity: 0;
-    transform: translateX(30px);
-  }
-  to {
-    opacity: 1;
-    transform: translateX(0);
-  }
-}
-
-@keyframes pulse {
-  0%, 100% {
-    opacity: 1;
-  }
-  50% {
-    opacity: 0.7;
-  }
-}
-
-@keyframes shimmer {
-  0% {
-    background-position: -1000px 0;
-  }
-  100% {
-    background-position: 1000px 0;
-  }
-}
-
-/* ========================================
-   RESPONSIVE STYLES
-   ======================================== */
-
-@media (max-width: 899px) {
-  .wrapper-main {
-    max-width: 100%;
-    margin: 16px auto;
-  }
-
-  .wrapper-container {
-    padding: 24px 20px;
-    border-radius: 12px;
-    margin-bottom: 70px;
-  }
-}
-
-@media (max-width: 600px) {
-  .wrapper-container {
-    padding: 20px 16px;
-    border-radius: 8px;
-    box-shadow: 0 4px 16px rgba(13, 70, 137, 0.1);
-  }
-
-  .btn-group-item {
-    padding: 8px 16px;
-    font-size: 14px;
-  }
-
-  .common-button {
-    padding: 10px 20px;
-    font-size: 14px;
-  }
 }
 
 @media (max-width: 480px) {
   .btn-group-item {
-    padding: 6px 12px;
-    font-size: 13px;
-  }
-
-  .common-button {
-    width: 100%;
+    padding: 0px 16px;
+    text-transform: capitalize;
   }
 }
