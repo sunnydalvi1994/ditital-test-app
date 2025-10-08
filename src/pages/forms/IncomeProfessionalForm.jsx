@@ -4,6 +4,7 @@ import { useFormContext, Controller } from 'react-hook-form';
 import OtpVerificationModal from '../../components/OtpVerificationModal';
 import handleVAPT from '../../utils/globalValidation';
 import LoaderWrapper from '../../components/LoaderWrapper';
+import '../../styles/global.css';
 
 // Indian number formatter
 const formatIndianNumber = (num = '') => {
@@ -32,9 +33,9 @@ export default function IncomeSelfEmployedForm() {
     <LoaderWrapper loading={loading}>
       <div className="form-container">
         <div className="section-title">Income Details</div>
-        <Grid container spacing={2}>
+        <Grid container spacing={2} direction="column" sx={{ marginTop: '40px' }}>
           {/* GST Number */}
-          <Grid item xs={12} sx={{ width: '50%' }}>
+          <Grid item size={{ xs: 12, sm: 10, md: 5 }}>
             <Controller
               name="gstNumber"
               control={control}
@@ -61,7 +62,7 @@ export default function IncomeSelfEmployedForm() {
                     <Button
                       variant="contained"
                       size="small"
-                      className="verify-btn"
+                      className="verify-btn gst-button"
                       onClick={() => {
                         setGstOtpModalOpen(true);
                         setGstForOTP(field.value);
@@ -95,7 +96,7 @@ export default function IncomeSelfEmployedForm() {
           </Grid>
 
           {/* Firm Name */}
-          <Grid item xs={12} sx={{ width: '50%' }}>
+          <Grid item size={{ xs: 12, sm: 10, md: 5 }}>
             <Controller
               name="firmName"
               control={control}
@@ -126,7 +127,7 @@ export default function IncomeSelfEmployedForm() {
           </Grid>
 
           {/* Sales / Gross Receipts */}
-          <Grid item xs={12} sx={{ width: '50%' }}>
+          <Grid item size={{ xs: 12, sm: 10, md: 5 }}>
             <Controller
               name="grossReceipts"
               control={control}
@@ -159,7 +160,7 @@ export default function IncomeSelfEmployedForm() {
           </Grid>
 
           {/* Gross Income as per ITR */}
-          <Grid item xs={12} sx={{ width: '50%' }}>
+          <Grid item size={{ xs: 12, sm: 10, md: 5 }}>
             <Controller
               name="grossIncomeItr"
               control={control}

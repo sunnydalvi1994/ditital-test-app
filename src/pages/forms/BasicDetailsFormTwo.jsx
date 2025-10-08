@@ -120,12 +120,12 @@ export default function BasicDetailsFormTwo() {
   return (
     <LoaderWrapper loading={loading}>
       <div className="form-container">
-        <Grid spacing={2}>
+        <Grid container spacing={2} direction="column">
           <div className="section-title">About You</div>
           <br />
 
           {/* Full Name */}
-          <Grid item sx={{ width: '50%' }} xs={12}>
+          <Grid item size={{ xs: 12, sm: 8, md: 6 }}>
             <Controller
               name="fullName"
               control={control}
@@ -158,7 +158,7 @@ export default function BasicDetailsFormTwo() {
           </Grid>
 
           {/* PAN Number */}
-          <Grid item xs={12} sx={{ width: '50%' }}>
+          <Grid item size={{ xs: 12, sm: 8, md: 6 }}>
             <Controller
               name="panNumber"
               control={control}
@@ -190,7 +190,7 @@ export default function BasicDetailsFormTwo() {
           </Grid>
 
           {/* DOB */}
-          <Grid sx={{ width: '50%' }}>
+          <Grid item size={{ xs: 12, sm: 8, md: 6 }}>
             <Controller
               name="dob"
               control={control}
@@ -221,7 +221,7 @@ export default function BasicDetailsFormTwo() {
           </Grid>
 
           {/* Email */}
-          <Grid item sx={{ width: '50%' }}>
+          <Grid item size={{ xs: 12, sm: 8, md: 6 }}>
             <Controller
               name="email"
               control={control}
@@ -283,7 +283,7 @@ export default function BasicDetailsFormTwo() {
           </Grid>
 
           {/* KYC Select + Verify */}
-          <Grid item xs={12} sx={{ width: '50%' }}>
+          <Grid item size={{ xs: 12, sm: 8, md: 6 }}>
             <Controller
               name="kycDocument"
               control={control}

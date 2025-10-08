@@ -191,7 +191,14 @@ export default function DealerInvoice() {
                   { label: 'Model', name: 'MODEL', options: ['Ertiga', 'Baleno'] },
                   { label: 'Car Variant', name: 'VARIANT', options: ['ZXI', 'VXI'] }
                 ].map(({ label, name, options }) => (
-                  <Grid item xs={12} sx={{ width: '50%' }} key={name}>
+                  <Grid
+                    item
+                    xs={12}
+                    sx={{
+                      width: { xs: '100%', sm: '70%', md: '50%' }
+                    }}
+                    key={name}
+                  >
                     <div className="form-group plain-input-group">
                       <label>{label}</label>
                       <Controller
@@ -234,7 +241,14 @@ export default function DealerInvoice() {
                   },
                   { label: 'Dealer Address', name: 'DEALER_ADDRESS', type: 'TEXT_AREA' }
                 ].map(({ label, name, type }) => (
-                  <Grid item xs={12} sx={{ width: '50%' }} key={name}>
+                  <Grid
+                    item
+                    xs={12}
+                    sx={{
+                      width: { xs: '100%', sm: '70%', md: '50%' }
+                    }}
+                    key={name}
+                  >
                     <div className="form-group plain-input-group">
                       <label>{label}</label>
                       <Controller
@@ -263,7 +277,13 @@ export default function DealerInvoice() {
                 ))}
 
                 {/* Dealer Vicinity */}
-                <Grid item xs={12} sx={{ width: '50%' }}>
+                <Grid
+                  item
+                  xs={12}
+                  sx={{
+                    width: { xs: '100%', sm: '70%', md: '50%' }
+                  }}
+                >
                   <Typography>Is dealer in vicinity of borrower?</Typography>
                   <Controller
                     name="DEALER_VICINITY"
@@ -286,7 +306,13 @@ export default function DealerInvoice() {
                 </Grid>
 
                 {/* Insurance Own Source */}
-                <Grid item xs={12} sx={{ width: '50%' }}>
+                <Grid
+                  item
+                  xs={12}
+                  sx={{
+                    width: { xs: '100%', sm: '70%', md: '50%' }
+                  }}
+                >
                   <Typography>Insurance from own source?</Typography>
                   <Controller
                     name="INSURANCE_OWN_SOURCE"
@@ -310,7 +336,13 @@ export default function DealerInvoice() {
 
                 {/* Insurance Amount */}
                 {/* {watchInsuranceOwnSource === 'yes' && ( */}
-                <Grid item xs={12} sx={{ width: '50%' }}>
+                <Grid
+                  item
+                  xs={12}
+                  sx={{
+                    width: { xs: '100%', sm: '70%', md: '50%' }
+                  }}
+                >
                   <div className="form-group plain-input-group">
                     <label>Insurance Amount</label>
                     <Controller
@@ -354,7 +386,14 @@ export default function DealerInvoice() {
                   { label: 'Other Taxes/GST & Others', name: 'OTHER_TAXES', type: 'AMOUNT_FIELD' },
                   { label: 'Installation Fee', name: 'INSTALLATION_FEE', type: 'AMOUNT_FIELD' }
                 ].map(({ label, name, type }) => (
-                  <Grid item xs={12} sx={{ width: '50%' }} key={name}>
+                  <Grid
+                    item
+                    xs={12}
+                    sx={{
+                      width: { xs: '100%', sm: '70%', md: '50%' }
+                    }}
+                    key={name}
+                  >
                     <div className="form-group plain-input-group">
                       <label>{label}</label>
                       <Controller
@@ -390,7 +429,13 @@ export default function DealerInvoice() {
                 ))}
 
                 {/* Total Invoice Value */}
-                <Grid item xs={12} sx={{ width: '50%' }}>
+                <Grid
+                  item
+                  xs={12}
+                  sx={{
+                    width: { xs: '100%', sm: '70%', md: '50%' }
+                  }}
+                >
                   <div className="form-group plain-input-group">
                     <label>Total Invoice Value</label>
                     <Controller
@@ -415,7 +460,13 @@ export default function DealerInvoice() {
                     />
                   </div>
                 </Grid>
-                <Grid item xs={12} sx={{ width: '50%' }}>
+                <Grid
+                  item
+                  xs={12}
+                  sx={{
+                    width: { xs: '100%', sm: '70%', md: '50%' }
+                  }}
+                >
                   {' '}
                   <Typography>Registration:</Typography>{' '}
                   <Controller

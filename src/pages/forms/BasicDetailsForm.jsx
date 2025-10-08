@@ -83,7 +83,7 @@ export default function BasicDetailsForm() {
               Do you have account with Kalolytic?
             </Typography>
             <RadioGroup value={hasAccount} onChange={(e) => handleAccountSelection(e.target.value)}>
-              <Grid container spacing={2} className="account-grid">
+              <Grid container spacing={2} className="account-grid" sx={{ marginLeft: '10px' }}>
                 {['yes', 'no'].map((option) => (
                   <Grid item xs={6} key={option}>
                     <FormControlLabel

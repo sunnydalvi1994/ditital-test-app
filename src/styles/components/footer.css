@@ -14,8 +14,8 @@
   width: 100%;
   z-index: 1000;
   box-shadow: 0 -4px 12px rgba(0, 0, 0, 0.08);
-  border-top: 3px solid transparent;
-  border-image: linear-gradient(90deg, #0d4689, #4fbbc8) 1;
+  /* border-top: 3px solid transparent;
+  border-image: linear-gradient(90deg, #0d4689, #4fbbc8) 1; */
   transition: all 0.3s ease;
 }
 

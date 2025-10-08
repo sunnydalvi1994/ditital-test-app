@@ -107,9 +107,11 @@ export default function OfferPage() {
             </Typography>
 
             {/* EMI */}
-            <Typography id="dynamicEMI" className="emi-text">
-              Rs. {emi.toLocaleString('en-IN')} p.m.
-            </Typography>
+            <Box sx={{ display: 'flex', justifyContent: 'center' }}>
+              <Typography id="dynamicEMI" className="emi-text">
+                Rs. {emi.toLocaleString('en-IN')} p.m.
+              </Typography>
+            </Box>
 
             {/* Tenure Section */}
             <Box className="tenure-section">

@@ -21,7 +21,8 @@ import {
   ListItemText,
   ListItemSecondaryAction,
   RadioGroup,
-  Radio
+  Radio,
+  Grid
 } from '@mui/material';
 import SearchIcon from '@mui/icons-material/Search';
 import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
@@ -182,45 +183,51 @@ export default function BranchSearchDialog({ open, onClose, onConfirm }) {
           <>
             <Box className="consent-section">
               {/* Search and Filter Row */}
-              <Box display="flex" alignItems="center" gap={2} mb={2}>
-                <TextField
-                  fullWidth
-                  variant="standard"
-                  placeholder="Search branch"
-                  value={branchAddress}
-                  onChange={(e) => setBranchAddress(e.target.value)}
-                  className="custom-textfield"
-                  InputProps={{
-                    startAdornment: (
-                      <InputAdornment position="start">
-                        <SearchIcon color="action" />
-                      </InputAdornment>
-                    )
-                  }}
-                />
-                <FormControl
-                  variant="standard"
-                  className="custom-textfield"
-                  size="small"
-                  sx={{ minWidth: 120 }}
-                >
-                  <label htmlFor="" className="branch-add-selct-label">
-                    Select State
-                  </label>
-                  <Select
-                    value={filter}
-                    className="branch-add-filter"
-                    onChange={(e) => setFilter(e.target.value)}
-                    style={{ marginTop: '3px' }}
-                  >
-                    <MenuItem value="all">All </MenuItem>
-                    <MenuItem value="Goa">Goa</MenuItem>
-                    <MenuItem value="Gujarat">Gujarat </MenuItem>
-                    <MenuItem value="Karnataka">Karnataka</MenuItem>
-                    <MenuItem value="Madhya Pradesh">Madhya Pradesh </MenuItem>
-                    <MenuItem value="Maharashtra">Maharashtra </MenuItem>
-                  </Select>
-                </FormControl>
+              <Box mb={2}>
+                <Grid container>
+                  <Grid item size={{ xs: 12, sm: 8, md: 10 }}>
+                    <TextField
+                      fullWidth
+                      variant="standard"
+                      placeholder="Search branch"
+                      value={branchAddress}
+                      onChange={(e) => setBranchAddress(e.target.value)}
+                      className="custom-textfield"
+                      InputProps={{
+                        startAdornment: (
+                          <InputAdornment position="start">
+                            <SearchIcon color="action" />
+                          </InputAdornment>
+                        )
+                      }}
+                    />
+                  </Grid>
+                  <Grid item  marginTop={{ xs: 3, sm: 10, md: 0 }} size={{ xs: 12, sm: 4, md: 2 }}>
+                    <FormControl
+                      variant="standard"
+                      className="custom-textfield branch-selector"
+                      size="small"
+                      sx={{ minWidth: 120 }}
+                    >
+                      <label htmlFor="" className="branch-add-selct-label">
+                        Select State
+                      </label>
+                      <Select
+                        value={filter}
+                        className="branch-add-filter"
+                        onChange={(e) => setFilter(e.target.value)}
+                        style={{ marginTop: '3px' }}
+                      >
+                        <MenuItem value="all">All </MenuItem>
+                        <MenuItem value="Goa">Goa</MenuItem>
+                        <MenuItem value="Gujarat">Gujarat </MenuItem>
+                        <MenuItem value="Karnataka">Karnataka</MenuItem>
+                        <MenuItem value="Madhya Pradesh">Madhya Pradesh </MenuItem>
+                        <MenuItem value="Maharashtra">Maharashtra </MenuItem>
+                      </Select>
+                    </FormControl>
+                  </Grid>
+                </Grid>
               </Box>
 
               {/* Branch List */}

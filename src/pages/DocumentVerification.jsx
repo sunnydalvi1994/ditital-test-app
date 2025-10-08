@@ -279,7 +279,15 @@ export default function DocumentVerification() {
           </Grid>
 
           {/* Navigation */}
-          <Box sx={{ display: 'flex', justifyContent: 'space-between', mt: 4 }}>
+          <Box
+            sx={{
+              display: 'flex',
+              justifyContent: 'space-between',
+              flexWrap: 'wrap',
+              mt: 4,
+              gap: 1
+            }}
+          >
             <Button className="prev-btn" variant="contained" color="secondary">
               Previous
             </Button>
@@ -288,6 +296,7 @@ export default function DocumentVerification() {
               variant="contained"
               sx={getProceedButtonStyle()}
               disabled={!allUploaded}
+              style={{ whiteSpace: 'nowrap' }}
             >
               {proceedButtonText}
             </Button>

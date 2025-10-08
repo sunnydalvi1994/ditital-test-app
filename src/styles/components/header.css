@@ -40,7 +40,7 @@
   bottom: 0;
   left: 0;
   right: 0;
-  height: 3px;
+  height: 1px;
   background: linear-gradient(90deg, #4fbbc8 0%, #0d4689 100%);
 }
 
@@ -203,10 +203,12 @@
   }
 
   .header-appbar {
-    background: linear-gradient(135deg, #0d4689 0%, #3a76b9 100%);
+    background: none;
+    text-align: center;
   }
 
   .header-toolbar {
     padding: 6px 12px;
   }
+
 }

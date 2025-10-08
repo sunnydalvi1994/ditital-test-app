@@ -87,9 +87,12 @@ export default function PersonalDetailsForm() {
       <div className="form-container more-about-you">
         <div className="section-title">More About You</div>
 
-        <Grid container spacing={2}>
+        <Grid container spacing={2} direction="column">
           {/* Full Name */}
-          <Box className="account-section">
+          <Box
+            className="account-section"
+            sx={{ display: 'flex', justifyContent: 'space-between', width: '100%' }}
+          >
             <Typography
               variant="h3"
               className="account-question"
@@ -103,7 +106,7 @@ export default function PersonalDetailsForm() {
               </Typography>
             )}
           </Box>
-          <Grid item xs={12} sx={{ width: '50%' }}>
+          <Grid item size={{ xs: 12, sm: 10, md: 5 }}>
             <Controller
               name="gender"
               control={control}
@@ -126,17 +129,17 @@ export default function PersonalDetailsForm() {
           </Grid>
 
           {/* Present Address Selection */}
-          <Grid container spacing={2}>
+          <Grid container spacing={2} direction="column">
             {/* Label */}
             <div className="form-group" style={{ marginBottom: '8px' }}>
               <label>Present Address</label>
             </div>
 
             {/* Address Options in Horizontal Row */}
-            <Grid item xs={12}>
+            <Grid item size={{ xs: 12, sm: 12, md: 12 }}>
               <Grid container spacing={2} sx={{ mt: 2 }} className="address-grid">
                 {addresses.map((addrObj, idx) => (
-                  <Grid key={idx} size={{ xs: 6, md: 4 }}>
+                  <Grid key={idx} size={{ xs: 12, sm: 6, md: 4 }}>
                     <Controller
                       name="presentAddress"
                       control={control}
@@ -218,7 +221,7 @@ export default function PersonalDetailsForm() {
             </Grid>
 
             {/* Same as Permanent checkbox */}
-            <Grid item xs={12}>
+            <Grid item size={{ xs: 12, sm: 12, md: 12 }}>
               <Controller
                 name="sameAsPermanent"
                 control={control}
@@ -234,10 +237,10 @@ export default function PersonalDetailsForm() {
             {/* Conditional Address Inputs */}
             {watch('sameAsPermanent') && (
               <>
-                <Grid item xs={12}>
-                  <Grid container spacing={2}>
+                <Grid item size={{ xs: 12, sm: 12, md: 12 }}>
+                  <Grid container spacing={2} direction="column">
                     {/* Address 1 */}
-                    <Grid item xs={12} sx={{ width: '50%' }}>
+                    <Grid item size={{ xs: 12, sm: 10, md: 5 }}>
                       <Controller
                         name="address1"
                         control={control}
@@ -273,7 +276,7 @@ export default function PersonalDetailsForm() {
                     </Grid>
 
                     {/* Address 2 */}
-                    <Grid item xs={12} sx={{ width: '50%' }}>
+                    <Grid item size={{ xs: 12, sm: 10, md: 5 }}>
                       <Controller
                         name="address2"
                         control={control}
@@ -308,7 +311,7 @@ export default function PersonalDetailsForm() {
                     </Grid>
 
                     {/* City */}
-                    <Grid item xs={12} sx={{ width: '50%' }}>
+                    <Grid item size={{ xs: 12, sm: 10, md: 5 }}>
                       <Controller
                         name="city"
                         control={control}
@@ -339,7 +342,7 @@ export default function PersonalDetailsForm() {
                     </Grid>
 
                     {/* State */}
-                    <Grid item xs={12} sx={{ width: '50%' }}>
+                    <Grid item size={{ xs: 12, sm: 10, md: 5 }}>
                       <Controller
                         name="state"
                         control={control}
@@ -370,7 +373,7 @@ export default function PersonalDetailsForm() {
                     </Grid>
 
                     {/* Pincode */}
-                    <Grid item xs={12} sx={{ width: '50%' }}>
+                    <Grid item size={{ xs: 12, sm: 10, md: 5 }}>
                       <Controller
                         name="pincode"
                         control={control}
@@ -405,7 +408,7 @@ export default function PersonalDetailsForm() {
             )}
           </Grid>
           {/* House Ownership */}
-          <Grid item xs={12}>
+          <Grid item size={{ xs: 12, sm: 10, md: 12 }}>
             <div className="form-group">
               <label>House Ownership</label>
               <Controller

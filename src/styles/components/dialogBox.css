@@ -273,4 +273,7 @@
   .branch-add-tabs {
     padding: 0px 20px !important;
   }
+  .branch-selector{
+    display: block;
+  }
 }

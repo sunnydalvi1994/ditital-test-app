@@ -1,11 +1,12 @@
 import React, { Suspense, lazy } from 'react';
 import { Routes, Route } from 'react-router-dom';
 import Footer from './components/Footer';
-import Header from './components/header';
+import Header from './components/Header';
 import { StyledEngineProvider, ThemeProvider } from '@mui/material/styles';
 import DealerInvoice from './pages/DealerInvoice';
 import { ToastContainer } from 'react-toastify';
 import theme from './theme/theme';
+import './styles/customToast.css';
 
 const HomePage = lazy(() => import('./pages/HomePage'));
 const MultiLoanFormPage = lazy(() => import('./pages/MultiLoanFormPage'));

@@ -12,6 +12,7 @@ import { Container, Button } from '@mui/material';
 import { useForm, FormProvider } from 'react-hook-form';
 import BranchSearchDialog from '../components/BranchSearchDialog';
 import '../styles/components/formAndButtons.css';
+import '../styles/customToast.css';
 
 // ✅ Import Toastify
 import { toast, ToastContainer } from 'react-toastify';
@@ -217,7 +218,7 @@ export default function MultiLoanFormPage() {
         />
 
         {/* ✅ Toast container */}
-        <ToastContainer autoClose={1000} position="top-bottom" />
+        {/* <ToastContainer autoClose={1000} position="top-bottom" /> */}
       </Container>
     </PageWrapper>
   );

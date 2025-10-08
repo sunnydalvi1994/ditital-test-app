@@ -47,9 +47,9 @@ export default function IncomeDetailsForm() {
     <LoaderWrapper loading={loading}>
       <div className="form-container">
         <div className="section-title">Income Details</div>
-        <Grid container spacing={2}>
+        <Grid container spacing={2} direction="column" sx={{ marginTop: '40px' }}>
           {/* UAN Field */}
-          <Grid item xs={12} sx={{ width: '50%' }}>
+          <Grid item size={{ xs: 12, sm: 10, md: 5 }}>
             <Controller
               name="uan"
               control={control}
@@ -117,7 +117,7 @@ export default function IncomeDetailsForm() {
           </Grid>
 
           {/* Employer Name */}
-          <Grid item xs={12} sx={{ width: '50%' }}>
+          <Grid item size={{ xs: 12, sm: 10, md: 5 }}>
             <Controller
               name="employerName"
               control={control}
@@ -147,7 +147,7 @@ export default function IncomeDetailsForm() {
           </Grid>
 
           {/* Designation */}
-          <Grid item xs={12} sx={{ width: '50%' }}>
+          <Grid item size={{ xs: 12, sm: 10, md: 5 }}>
             <Controller
               name="designation"
               control={control}
@@ -178,7 +178,7 @@ export default function IncomeDetailsForm() {
           </Grid>
 
           {/* Gross Monthly Income */}
-          <Grid item xs={12} sx={{ width: '50%' }}>
+          <Grid item size={{ xs: 12, sm: 10, md: 5 }}>
             <Controller
               name="grossIncome"
               control={control}
@@ -211,7 +211,7 @@ export default function IncomeDetailsForm() {
           </Grid>
 
           {/* Bonus, Overtime */}
-          <Grid item xs={12} sx={{ width: '50%' }}>
+          <Grid item size={{ xs: 12, sm: 10, md: 5 }}>
             <Controller
               name="bonusOvertime"
               control={control}
@@ -248,7 +248,7 @@ export default function IncomeDetailsForm() {
           </Grid>
 
           {/* Total EMI */}
-          <Grid item xs={12} sx={{ width: '50%' }}>
+          <Grid item size={{ xs: 12, sm: 10, md: 5 }}>
             <Controller
               name="totalEmi"
               control={control}
@@ -280,7 +280,7 @@ export default function IncomeDetailsForm() {
           </Grid>
 
           {/* Balance in Hand */}
-          <Grid item xs={12} sx={{ width: '50%' }}>
+          <Grid item size={{ xs: 12, sm: 10, md: 5 }}>
             <Controller
               name="balanceInHand"
               control={control}
