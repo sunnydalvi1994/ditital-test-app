@@ -1,0 +1,331 @@
+/* ========================================
+   OTP MODAL - PREMIUM BANKING DESIGN
+   ======================================== */
+
+
+.otp-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: 1050;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(8px);
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.otp-modal-content {
+  background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
+  border-radius: 20px;
+  width: 90%;
+  max-width: 450px;
+  max-height: 100vh;
+  box-shadow: 0 16px 48px rgba(255, 107, 53, 0.25);
+  border: 3px solid transparent;
+  background-clip: padding-box;
+  position: relative;
+  animation: scaleIn 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  margin: auto;
+}
+
+.otp-modal-content::before {
+  content: '';
+  position: absolute;
+  inset: -3px;
+  border-radius: 20px;
+  padding: 3px;
+  background: linear-gradient(135deg, #FF6B35, #2C3E50);
+  -webkit-mask:
+    linear-gradient(#fff 0 0) content-box,
+    linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  pointer-events: none;
+}
+
+@keyframes scaleIn {
+  from {
+    transform: scale(0.9);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.otp-header {
+  background: linear-gradient(135deg, #FF6B35 0%, #E5522A 100%);
+  color: white;
+  padding: 28px 24px;
+  text-align: center;
+  position: relative;
+  border-radius: 17px 17px 0 0;
+}
+
+.otp-header::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 4px;
+  background: #2C3E50;
+  border-radius: 2px;
+}
+
+.otp-header h3 {
+  margin: 0;
+  font-size: 22px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+
+.close-otp {
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  color: white;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+}
+
+.close-otp:hover {
+  background: rgba(255, 255, 255, 0.2);
+  transform: rotate(90deg);
+}
+
+.otp-body {
+  padding: 36px 28px;
+  text-align: center;
+}
+
+.otp-body p {
+  margin-bottom: 28px;
+  color: #333;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.5;
+}
+
+.otp-input-container {
+  margin-bottom: 24px;
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.otp-digit {
+  width: 52px;
+  height: 52px;
+  font-size: 20px;
+  text-align: center;
+  border: 3px solid #e0e6ed;
+  border-radius: 12px;
+  font-weight: 800;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  background-color: white;
+  color: #FF6B35;
+}
+
+.otp-digit:focus {
+  outline: none;
+  border-color: #FF6B35;
+  box-shadow: 0 0 0 4px rgba(255, 107, 53, 0.15);
+  background: linear-gradient(135deg, #f8f9fa, #ffffff);
+  transform: scale(1.08);
+  animation: ripple 0.6s ease-out;
+}
+
+@keyframes ripple {
+  0% {
+    box-shadow: 0 0 0 0 rgba(255, 107, 53, 0.4);
+  }
+  100% {
+    box-shadow: 0 0 0 8px rgba(255, 107, 53, 0);
+  }
+}
+
+.otp-digit:hover {
+  border-color: #FF8C61;
+}
+
+.otp-timer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 28px;
+  padding: 20px;
+  background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
+  border-radius: 12px;
+  border: 2px solid rgba(255, 107, 53, 0.1);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.otp-timer span {
+  font-size: 20px;
+  font-weight: 800;
+  background: linear-gradient(135deg, #FF6B35 0%, #2C3E50 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.resend-otp-btn {
+  background: linear-gradient(135deg, #6c757d 0%, #5a6268 100%);
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 600;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 4px 12px rgba(108, 117, 125, 0.2);
+  letter-spacing: 0.5px;
+}
+
+.resend-otp-btn:disabled {
+  background: linear-gradient(135deg, #e9ecef 0%, #dee2e6 100%);
+  color: #6c757d;
+  cursor: not-allowed;
+  box-shadow: none;
+}
+
+.resend-otp-btn:not(:disabled):hover {
+  background: linear-gradient(135deg, #5a6268 0%, #6c757d 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(108, 117, 125, 0.3);
+}
+
+.otp-actions {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+}
+
+.cancel-otp-btn,
+.verify-otp-btn {
+  padding: 14px 32px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 15px;
+  font-weight: 600;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  letter-spacing: 0.5px;
+  min-width: 120px;
+}
+
+.cancel-otp-btn {
+  background: linear-gradient(135deg, #6c757d 0%, #5a6268 100%);
+  color: white;
+  box-shadow: 0 4px 12px rgba(108, 117, 125, 0.2);
+}
+
+.cancel-otp-btn:hover {
+  background: linear-gradient(135deg, #5a6268 0%, #6c757d 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(108, 117, 125, 0.3);
+}
+
+.verify-otp-btn {
+  background: linear-gradient(135deg, #FF6B35 0%, #E5522A 100%);
+  color: white;
+  box-shadow: 0 4px 12px rgba(255, 107, 53, 0.3);
+}
+
+.verify-otp-btn:hover {
+  background: linear-gradient(135deg, #E5522A 0%, #FF6B35 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(255, 107, 53, 0.4);
+}
+
+/* ========================================
+   RESPONSIVE STYLES
+   ======================================== */
+
+@media (max-width: 600px) {
+  .otp-modal-content {
+    width: 95%;
+    border-radius: 16px;
+  }
+
+  .otp-header {
+    padding: 24px 20px;
+    border-radius: 16px 16px 0 0;
+  }
+
+  .otp-header h3 {
+    font-size: 20px;
+  }
+
+  .otp-body {
+    padding: 28px 20px;
+  }
+
+  .otp-digit {
+    width: 45px;
+    height: 45px;
+    font-size: 18px;
+  }
+
+  .otp-timer {
+    padding: 16px;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .otp-timer span {
+    font-size: 18px;
+  }
+
+  .otp-actions {
+    flex-direction: column;
+  }
+
+  .cancel-otp-btn,
+  .verify-otp-btn {
+    width: 100%;
+  }
+}
+
+@media (max-width: 400px) {
+  .otp-digit {
+    width: 40px;
+    height: 40px;
+    font-size: 16px;
+  }
+
+  .otp-body {
+    padding: 20px 16px;
+  }
+
+  .otp-body p {
+    font-size: 15px;
+  }
+}

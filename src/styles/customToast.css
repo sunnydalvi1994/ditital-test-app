@@ -1,0 +1,21 @@
+.Toastify__toast--success {
+  background: linear-gradient(135deg, #FF6B35 0%, #FF8C61 100%) !important;
+  color: #ffffff !important;
+}
+
+.Toastify__progress-bar--success {
+  background: #FF6B35 !important;
+}
+
+
+/* Icon container background — overrides default green */
+.Toastify__toast-icon--success {
+  background: linear-gradient(135deg, #FF6B35 0%, #FF8C61 100%) !important;
+  border-radius: 50% !important;
+  color: white !important;
+}
+
+/* Check icon color */
+.Toastify__toast-icon--success svg {
+  fill: white !important;
+}
